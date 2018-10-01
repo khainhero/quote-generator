@@ -1,0 +1,88 @@
+    if(data.quote && data.author){
+        let { quote } = this.state;
+        quote.author = data.author;
+        quote.quote = data.quote;
+        this.setState({ quote}, () =>{
+            if(this.state.hasQuote === false){
+                this.setState({ hasQuote:true})
+            }
+            
+        });
+      
+    }
+    else{
+        return console.error('No quote found 404');
+    }
+
+
+    .quote {
+  text-align: center;
+}
+
+.author{
+  text-align: right;
+ 
+}
+
+
+.App-header {
+  background-color:whitesmoke; 
+  width:450px;
+  height: auto;
+  position:relative;
+  padding: 35px 45px;
+  border-style:inset;
+  border-color: goldenrod;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+#root{
+  background-color:white;
+}
+body {
+  background-color:whitesmoke;
+  color: #333;
+  font-family: 'Raleway', sans-serif;
+  font-weight:400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#buttoncss{
+  position:relative;
+  left:350px;
+
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    
+    <title>Random Quote Generator</title>
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"></div>
+    
+    
+  </body>
+</html>
